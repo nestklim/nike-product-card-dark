@@ -41,55 +41,40 @@ body{
 	margin-top: 67px;
 	text-align: center;
 }
-.ba-product__color input{
-	position: relative;
+.ba-product__color span{
 	margin: 0 2.5px;
-	height: 9px;
-	width: 9px;
-	vertical-align: middle;
-	cursor: pointer;
-}
-.ba-product__color input:before{
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	top: 0;
 	height: 9px;
 	width: 9px;
 	border-radius: 50%;
 	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
 }
-.ba-product__color input:hover{
+.ba-product__color span:hover{
 	width: 12px;
 	height: 12px;
 	margin: 0 1px;
 }
-.ba-product__color input:hover:before{
-	width: 12px;
-	height: 12px;
-}
-.ba-product__color input:checked{
+.ba-product__color input:checked + span{
 	width: 12px;
 	height: 12px;
 	margin: 0 1px;
-}
-.ba-product__color input:checked:before{
-	width: 12px;
-	height: 12px;
 	box-shadow: 0 0 0 2px #7b8088;
 }
-.ba-product__color input.ba-product__color--color-1:before{
+.ba-product__color--color-1 span{
 	background: #1F273F;
 }
-.ba-product__color input.ba-product__color--color-2:before{
+.ba-product__color--color-2 span{
 	background: #fff;
 }
-.ba-product__color input.ba-product__color--color-3:before{
+.ba-product__color--color-3 span{
 	background: #ed3333;
 }
-.ba-product__color input.ba-product__color--color-4:before{
+.ba-product__color--color-4 span{
 	background: #29e3ea;
+}
+.ba-product__color input{
+	    display: none;
 }
 
 .ba-product__col-2{
@@ -127,7 +112,8 @@ body{
 	background: #4c525a;
 }
 .ba-product__button:hover, .ba-product__select select:hover{
-opacity: 0.5;
+	opacity: 0.5;
+	transition: opacity .3s ease-in;
 }
 /* Typography */
 a,
@@ -176,3 +162,53 @@ select:focus {
 textarea {
 
 }
+/* .ba-product__color input{
+	position: relative;
+	margin: 0 2.5px;
+	height: 9px;
+	width: 9px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.ba-product__color input:before{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 9px;
+	width: 9px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.ba-product__color input:hover{
+	width: 12px;
+	height: 12px;
+	margin: 0 1px;
+}
+.ba-product__color input:hover:before{
+	width: 12px;
+	height: 12px;
+}
+.ba-product__color input:checked{
+	width: 12px;
+	height: 12px;
+	margin: 0 1px;
+}
+.ba-product__color input:checked:before{
+	width: 12px;
+	height: 12px;
+	box-shadow: 0 0 0 2px #7b8088;
+}
+.ba-product__color input.ba-product__color--color-1:before{
+	background: #1F273F;
+}
+.ba-product__color input.ba-product__color--color-2:before{
+	background: #fff;
+}
+.ba-product__color input.ba-product__color--color-3:before{
+	background: #ed3333;
+}
+.ba-product__color input.ba-product__color--color-4:before{
+	background: #29e3ea;
+} */
